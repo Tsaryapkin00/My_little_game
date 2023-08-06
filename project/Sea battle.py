@@ -70,7 +70,7 @@ class Board:
 
     def __str__(self):
         res = ""
-        res += "  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |"
+        res += "  | 1 | 2 | 3 | 4 | 5 | 6 |"
         for i, row in enumerate(self.field):
             res += f"\n{i + 1} | " + " | ".join(row) + " |"
 
@@ -186,7 +186,7 @@ class User(Player):
 
 class Game:
     def try_board(self):
-        lens = [5, 3, 2, 2, 3, 2, 2, 2, 1, 1, 1]
+        lens = [3, 2, 2, 1, 1, 1, 1]
         board = Board(size=self.size)
         attempts = 0
         for l in lens:
